@@ -1,0 +1,18 @@
+base_config:
+    - ./base/diffsr_base.yaml
+    - ./data/df2k4x.yaml
+trainer_cls: tasks.srdiff_df2k.SRDiffDf2k
+
+# model
+unet_dim_mults: 1|2|3|4
+decay_steps: 200000
+
+# train and test
+batch_size: 64
+max_updates: 400000
+
+sam_config:
+    cond_sam: False
+    p_losses_sam: False
+    p_sample_sam: False
+    q_sample_sam: False
