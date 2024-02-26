@@ -1,6 +1,6 @@
 # SAM-DiffSR: Structure-Modulated Diffusion Model for Image Super-Resolution
 
-<img src="./README.assets/image-20240218110908900.png" alt="image-20240218110908900" style="zoom: 25%;" /><img src="./README.assets/image-20240218111453853.png" alt="image-20240218111453853" style="zoom: 50%;" />
+<img src="./README.assets/image-20240218110908900.png" alt="image-20240218110908900" style="zoom: 25%;" />
 
 This code is the implementation of SAM-DiffSR.
 
@@ -55,7 +55,8 @@ pip install -r requirements.txt
 
     - Use processed data:
 
-      Download the mask data from httpxxxx
+      Download the mask data from [CowTransfer](https://cowtransfer.com/s/46a894c9f9f949)
+      or [Google Driver](https://drive.google.com/drive/folders/11RqPtfEa36eY1YpJwbF-nyHf1InjI1qR?usp=share_link).
 
     - Or, generate data from scratch
 
@@ -103,7 +104,9 @@ pip install -r requirements.txt
 
 ## Training
 
-1. download rrdb pretrain model from [CowTransfer](https://cowtransfer.com/s/a671fa553a4d44) or [Google Driver](https://drive.google.com/drive/folders/1rVvEQ3uJu6sDUvqnEjKICi74u_rdo01L?usp=share_link), and move the weight to `./weights/rrdb_div2k.ckpt`
+1. download rrdb pretrain model from [CowTransfer](https://cowtransfer.com/s/a671fa553a4d44)
+   or [Google Driver](https://drive.google.com/drive/folders/1rVvEQ3uJu6sDUvqnEjKICi74u_rdo01L?usp=share_link), and move
+   the weight to `./weights/rrdb_div2k.ckpt`
 
 2. train diffusion model
 
