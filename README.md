@@ -3,8 +3,9 @@
 This is the official implementation of the
 paper "[SAM-DiffSR: Structure-Modulated Diffusion Model for Image Super-Resolution](https://arxiv.org/abs/2402.17133)".
 
-
-<img src="./README.assets/image-20240218110908900.png" alt="image-20240218110908900" width="80%" />
+<div align=center>
+    <img src="./README.assets/image-20240218110908900.png" alt="image-20240218110908900" width="80%" />
+</div>
 
 ## Abstract
 
@@ -28,8 +29,13 @@ NOT require SAM at inference.
 | **SSIM** | 0.8731 | 0.7484 | 0.7721   | 0.7003  | 0.8899   | 0.8353     | 0.8109 |
 | **FID**  | 48.20  | 49.84  | 4.5276   | 60.81   | 2.3994   | 38.42      | 0.3809 |
 
-<img src="README.assets/vis-1.png" width="80%" />
-<img src="README.assets/vis-2.png" width="80%" />
+<div align=center>
+    <img src="README.assets/vis-1.png" width="80%" />
+</div>
+
+<div align=center>
+    <img src="README.assets/vis-2.png" width="80%" />
+</div>
 
 ## Data and Checkpoint
 
