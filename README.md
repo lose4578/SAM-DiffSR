@@ -1,8 +1,24 @@
 # SAM-DiffSR: Structure-Modulated Diffusion Model for Image Super-Resolution
 
-<img src="./README.assets/image-20240218110908900.png" alt="image-20240218110908900" style="zoom: 25%;" />
+This is the official implementation of the
+paper "[SAM-DiffSR: Structure-Modulated Diffusion Model for Image Super-Resolution](https://arxiv.org/abs/2402.17133)".
 
-This code is the implementation of SAM-DiffSR.
+
+<img src="./README.assets/image-20240218110908900.png" alt="image-20240218110908900" width="80%" />
+
+## Abstract
+
+Conventional diffusion models perform noise sampling from a single distribution,
+constraining their ability to handle real-world scenes and complex textures across semantic regions. With the success of
+segment anything model (SAM), generating sufficiently fine-grained region masks can enhance the detail recovery of
+diffusion-based SR model. However, directly integrating SAM into SR models will result in much higher computational
+cost. We propose the SAM-DiffSR model, which can utilize the fine-grained structure information from SAM
+in the process of sampling noise to improve the image quality without additional computational cost during inference. In
+the process of training, we encode structural position information into the segmentation mask from SAM. Then the encoded
+mask is integrated into the forward diffusion process by modulating it to the sampled noise. This adjustment allows us
+to independently adapt the noise mean within each corresponding segmentation area. The diffusion model is trained to
+estimate this modulated noise. Crucially, our proposed framework does NOT change the reverse diffusion process and does
+NOT require SAM at inference.
 
 ## Result
 
@@ -11,6 +27,9 @@ This code is the implementation of SAM-DiffSR.
 | **PSNR** | 30.99  | 27.14  | 25.54    | 26.47   | 29.43    | 30.30      | 29.34  |
 | **SSIM** | 0.8731 | 0.7484 | 0.7721   | 0.7003  | 0.8899   | 0.8353     | 0.8109 |
 | **FID**  | 48.20  | 49.84  | 4.5276   | 60.81   | 2.3994   | 38.42      | 0.3809 |
+
+<img src="README.assets/vis-1.png" width="80%" />
+<img src="README.assets/vis-2.png" width="80%" />
 
 ## Data and Checkpoint
 
