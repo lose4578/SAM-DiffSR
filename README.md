@@ -64,15 +64,15 @@ pip install -r requirements.txt
    ├── DF2K
    │   └── DF2K_train_HR
    │       ├── 0002.png
-   │   	├── 0003.png
+   │       ├── 0003.png
    │       ├── 0001.png
-   |		├── ...
+   |       ├── ...
    └── DIV2K
        └── DIV2K_valid_HR
            ├── 0002.png
-       	├── 0003.png
+           ├── 0003.png
            ├── 0001.png
-    		├── ...
+           ├── ...
    ```
 
 
@@ -178,6 +178,21 @@ python tasks/infer.py \
 --save_dir your/sr/img/save/path \
 --ckpt_path model_ckpt_steps_400000.ckpt
 ```
+
+## Citation
+
+If you find this project useful in your research, please consider cite:
+
+```bibtex
+@article{wang2024sam,
+  title={SAM-DiffSR: Structure-Modulated Diffusion Model for Image Super-Resolution},
+  author={Wang, Chengcheng and Hao, Zhiwei and Tang, Yehui and Guo, Jianyuan and Yang, Yujie and Han, Kai and Wang, Yunhe},
+  journal={arXiv preprint arXiv:2402.17133},
+  year={2024}
+}
+```
+
+
 
 ## Acknowledgement
 
