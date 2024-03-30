@@ -109,9 +109,6 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=str, default='', help='output embedding mask data path')
     args = parser.parse_args()
     
-    # input_sam_data_path = '/home/ma-user/work/data/sr_sam/ori'
-    # out_merge_data_path = '/home/ma-user/work/data/sr_sam/merge_RoPE'
-    
     print(f"Processing {args.input}...")
     targets = list(Path(args.input).glob('*.json'))
     os.makedirs(args.output, exist_ok=True)
